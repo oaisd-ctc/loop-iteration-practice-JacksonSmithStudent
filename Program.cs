@@ -43,4 +43,22 @@ class Program
         }
         Console.WriteLine();
     }
- 
+     static void WriteNThrough1_While(int n)
+    {
+        if (n < 1)
+        {
+            ShowError(n);
+            return;
+        }
+        while (n > 0)
+        {
+            Console.Write(n + " ");
+            n--;
+        }
+        Console.WriteLine();
+    }
+    static void ShowError(int n)
+    {
+        Console.WriteLine(n + " is out of range.");
+    }
+}
