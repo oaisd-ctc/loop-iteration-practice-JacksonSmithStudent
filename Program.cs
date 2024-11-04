@@ -14,4 +14,20 @@ class Program
         WriteNThrough1_While(5);
         WriteNThrough1_While(0);
         
+    }
+    static void Write1ThroughN_While(int n)
+    {
+        if (n < 1)
+        {
+            ShowError(n);
+            return;
+        }
+        int i = 1;
+        while (i <= n)
+        {
+            Console.Write(i + " ");
+            i++;
+        }
+        Console.WriteLine();
+    }
    
