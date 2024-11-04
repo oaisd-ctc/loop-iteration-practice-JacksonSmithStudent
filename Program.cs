@@ -16,7 +16,11 @@ class Program
         WriteNThrough1_For(-1);
         WriteNThrough1_For(5);
         WriteNThrough1_For(0);
-        
+        WriteEvensThrough100();
+        FindSum(5);
+        FindSum(1);
+        FindSum(-3);
+        FindSum(100);
     }
     static void Write1ThroughN_While(int n)
     {
@@ -72,6 +76,38 @@ class Program
             Console.Write(i + " ");
         }
         Console.WriteLine();
+    }
+     static void WriteEvensThrough100()
+    {
+        for (int i = 2; i <= 100; i += 2)
+        {
+            Console.Write(i + " ");
+        }
+        Console.WriteLine();
+    }
+     static void FindSum(int n)
+    {
+        int sum = 0;
+        if (n == 0)
+        {
+            Console.WriteLine(0);
+            return;
+        }
+        if (n > 0)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                sum += i;
+            }
+        }
+        else
+        {
+            for (int i = n; i <= 1; i++)
+            {
+                sum += i;
+            }
+        }
+        Console.WriteLine(sum);
     }
     static void ShowError(int n)
     {
