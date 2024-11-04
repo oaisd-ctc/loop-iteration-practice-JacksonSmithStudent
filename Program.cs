@@ -175,6 +175,36 @@ class Program
         }
         Console.WriteLine(sum);
     }
+    static void OutputRightTriangle(int baseLength)
+    {
+        if (baseLength == 0)
+        {
+            ShowError(baseLength);
+            return;
+        }
+        if (baseLength > 0)
+        {
+            for (int i = 1; i <= baseLength; i++)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+        }
+        else
+        {
+            for (int i = -baseLength; i > 0; i--)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
     static void ShowError(int n)
     {
         Console.WriteLine(n + " is out of range.");
