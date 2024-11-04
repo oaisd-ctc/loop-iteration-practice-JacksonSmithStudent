@@ -29,7 +29,16 @@ class Program
         FindSumOfEvenNumbers(25);
         FindSumOfEvenNumbers(-25);
         FindSumOfOddNumbers(10);
-        FindSumOfOddNumbers()
+        FindSumOfOddNumbers(-5);
+        FindSumOfOddNumbers(1);
+        FindSumOfOddNumbers(2);
+        FindSumOfOddNumbers(25);
+        FindSumOfOddNumbers(-25);
+        OutputRightTriangle(4);
+        OutputRightTriangle(6);
+        OutputRightTriangle(-4);
+        OutputRightTriangle(-6);
+        OutputRightTriangle(0);
     }
     static void Write1ThroughN_While(int n)
     {
@@ -88,7 +97,7 @@ class Program
     }
      static void WriteEvensThrough100()
     {
-        for (int i = 2; i <= 100; i += 2)
+        for (int i = 2; i <= 100; i += 1)
         {
             Console.Write(i + " ");
         }
@@ -136,6 +145,30 @@ class Program
         else
         {
             for (int i = n; i <= 1; i += 2)
+            {
+                sum += i;
+            }
+        }
+        Console.WriteLine(sum);
+    }
+     static void FindSumOfOddNumbers(int n)
+    {
+        int sum = 0;
+        if (n == 0)
+        {
+            Console.WriteLine(0);
+            return;
+        }
+        if (n > 0)
+        {
+            for (int i = 1; i <= n; i += 2)
+            {
+                sum += i;
+            }
+        }
+        else
+        {
+            for (int i = n; i <= -1; i += 2)
             {
                 sum += i;
             }
