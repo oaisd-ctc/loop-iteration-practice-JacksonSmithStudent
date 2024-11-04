@@ -30,4 +30,17 @@ class Program
         }
         Console.WriteLine();
     }
-   
+     static void Write1ThroughN_For(int n)
+    {
+        if (n < 1)
+        {
+            ShowError(n);
+            return;
+        }
+        for (int i = 1; i <= n; i++)
+        {
+            Console.Write(i + " ");
+        }
+        Console.WriteLine();
+    }
+ 
