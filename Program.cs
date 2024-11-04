@@ -13,6 +13,9 @@ class Program
         WriteNThrough1_While(-1);
         WriteNThrough1_While(5);
         WriteNThrough1_While(0);
+        WriteNThrough1_For(-1);
+        WriteNThrough1_For(5);
+        WriteNThrough1_For(0);
         
     }
     static void Write1ThroughN_While(int n)
@@ -54,6 +57,19 @@ class Program
         {
             Console.Write(n + " ");
             n--;
+        }
+        Console.WriteLine();
+    }
+    static void WriteNThrough1_For(int n)
+    {
+        if (n < 1)
+        {
+            ShowError(n);
+            return;
+        }
+        for (int i = n; i > 0; i--)
+        {
+            Console.Write(i + " ");
         }
         Console.WriteLine();
     }
